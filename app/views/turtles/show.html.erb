@@ -1,0 +1,21 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @turtle.first_name %>
+  <%= @turtle.last_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_turtle_path(@turtle), class: "btn btn-primary"%> |
+<%= link_to 'Back', turtles_path, class: "btn btn-info" %>
+
+<h2>This turtle has these holidays planned out <%= @turtle.name  %></h2>
+<ul class="list-group">
+  <% @turtle.holidays.each do |holiday| %>
+    <li class="list-group-item"><%= holiday.user %> <%= holiday.status %> <%= holiday.date %></li>
+  <% end %>
+</ul>
+<%= link_to 'Go on a holiday with this turtle!', new_holiday_turtle_path(@turtle), class: "btn btn-warning" %>
+</div>
