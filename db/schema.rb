@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2022_05_23_124929) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-
   create_table "turtles", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -23,8 +22,9 @@ ActiveRecord::Schema.define(version: 2022_05_23_124929) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_turtles_on_user_id"
+  end
 
-    create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2022_05_23_124929) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "user_name"
     t.string "first_name"
     t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
