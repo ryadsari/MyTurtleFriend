@@ -11,5 +11,4 @@ class TurtlesController < ApplicationController
   def new
     @turtle = Turtle.new
   end
-
 end
