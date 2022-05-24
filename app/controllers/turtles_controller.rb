@@ -1,6 +1,7 @@
 class TurtlesController < ApplicationController
   def index
     @turtles = Turtle.all
+    @little_description = ['Great for a movie night', 'Enjoys ice cream and clowns', 'Can camouflage as a hat', 'Cracks jokes every few minutes', 'Great for cuddles', 'Will make you coffee in the morning']
   end
 
   def show
@@ -17,6 +18,19 @@ class TurtlesController < ApplicationController
     @turtle.save
     if @turtle.save
       redirect_to turtles_path
+    else
+      render :new
+    end
+  end
+
+  def edit
+    @turtle = Turtle.find(params[:id])
+  end
+
+  def update
+    @turtle = Turtle.find(params[:id])
+    if @turtle.update(turtle_params)
+      redirect_to turtle_path(turtle)
     else
       render :new
     end
