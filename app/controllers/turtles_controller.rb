@@ -22,6 +22,19 @@ class TurtlesController < ApplicationController
     end
   end
 
+  def edit
+    @turtle = Turtle.find(params[:id])
+  end
+
+  def update
+    @turtle = Turtle.find(params[:id])
+    if @turtle.update(turtle_params)
+      redirect_to turtle_path(turtle)
+    else
+      render :new
+    end
+  end
+
   private
 
   def turtle_params
