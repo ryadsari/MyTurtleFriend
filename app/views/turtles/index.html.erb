@@ -5,8 +5,12 @@
       <li class="turtle-card">
         <%= link_to turtle.first_name, turtle_path(turtle), class: "turtle-link-names"%>
         <%= link_to turtle.last_name, turtle_path(turtle), class:"turtle-link-names" %>
-        <%= @little_description.sample %>
-        <%= link_to (image_tag 'cuteturtle.jpg', height: 150), turtle_path(turtle)%>
+        <%= turtle.description %>
+        <% if turtle.photo.attached? %>
+          <%= link_to (cl_image_tag turtle.photo.key, height: 300, width: 400, crop: :fill), turtle_path(turtle)%>
+        <% else %>
+          <%= image_tag 'cuteturtle.jpg', height: 300, width: 400, crop: :fill %>
+        <% end %>
       </li>
     <% end %>
   </ul>
