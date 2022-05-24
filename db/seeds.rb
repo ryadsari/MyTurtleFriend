@@ -26,7 +26,8 @@ Turtle.destroy_all
 
   turtle = Turtle.new(
     first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name
+    last_name: Faker::Name.last_name,
+    price: rand(1..50)
   )
   turtle.user = user
   turtle.save
