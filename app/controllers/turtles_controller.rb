@@ -39,6 +39,7 @@ class TurtlesController < ApplicationController
   private
 
   def turtle_params
-    params.require(:turtle).permit(:first_name, :last_name, :price, :description, :photo)
+    params.require(:turtle).permit(:first_name, :last_name, :photo, :description, :price)
+
   end
 end
