@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @booking.turtle_id = params[:turtle_id]
     @booking.user_id = current_user.id
-    @booking.full_price = params[:price]
+    @booking.title = params[:first_name]
   end
 
   def create
