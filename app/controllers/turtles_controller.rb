@@ -1,6 +1,7 @@
 class TurtlesController < ApplicationController
   def index
     @turtles = Turtle.all
+    @little_description = ['Great for a movie night', 'Enjoys ice cream and clowns', 'Can camouflage as a hat', 'Cracks jokes every few minutes', 'Great for cuddles', 'Will make you coffee in the morning']
   end
 
   def show
