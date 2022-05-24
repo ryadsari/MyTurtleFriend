@@ -3,8 +3,10 @@ class BookingsController < ApplicationController
   before_action :set_price, only: [:update, :destroy]
 
   def new
-    @booking = Booking.new(start: Date.strptime(params[:start], '%d%m%Y').strftime("%d/%m/%Y"), end: Date.strptime(params[:start], '%d%m%Y').strftime("%d/%m/%Y"))
-
+    @booking = Booking.new
+    @booking.turtle_id = params[:turtle_id]
+    @booking.user_id = current_user.id
+    @booking.full_price = params[:price]
   end
 
   def create
@@ -18,6 +20,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit( :start, :end, :full_price, :turtle_id)
+    params.require(:booking).permit(:start, :end, :full_price, :turtle_id)
   end
 end
