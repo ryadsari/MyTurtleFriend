@@ -1,1 +1,22 @@
 //
+
+.turtle-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0
+}
+
+.turtle-card:hover {
+  opacity: 0.7
+}
+
+ .turtle-link-names {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.turtle-link-names:hover {
+  color: black
+}
