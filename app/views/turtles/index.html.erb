@@ -1,11 +1,11 @@
 <br><br><br><br><br>
 <div class="container">
-<ul class="turtle-list">
-  <div class="turtle-container"></div>
+  <ul class="turtle-list">
     <% @turtles.each do |turtle| %>
-      <li>
-        <%= link_to turtle.first_name, turtle_path(turtle)%>
-        <%= turtle.last_name %>
+      <li class="turtle-card">
+        <%= link_to turtle.first_name, turtle_path(turtle), class: "turtle-link-names"%>
+        <%= link_to turtle.last_name, turtle_path(turtle), class:"turtle-link-names" %>
+        <%= link_to (image_tag 'cuteturtle.jpg', height: 150), turtle_path(turtle)%>
       </li>
     <% end %>
   </ul>
