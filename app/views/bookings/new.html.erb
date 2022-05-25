@@ -1,11 +1,49 @@
-<h1>  <%= @turtle.first_name =%> </h1>
-<img src="/assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg" alt="" width="300" height="200">
+<body>
 
+<main>
+  <figure>
+    <picture>
 
-<%= simple_form_for [@turtle, @booking] do |f| %>
-  <%= f.date_field :start_date %>
-  <%= f.date_field  :end_date %>
+      <source  media="(min-width: 768px)"
+              srcset="/assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg     340w,
+                      /assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg     680w,
+                      /assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg    1020w"
+                sizes="360px" />
+      <source srcset="/assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg      340w,
+                      /assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg      680w,
+                      /assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg     1020w"
+                sizes="(min-width: 320px) 290px,
+                      (min-width: 480px) 435px
+                      (min-width: 640px) 580px" />
+      <img       src="/assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg"
+                  alt="Your new budy !" />
+    </picture>
 
-  <div class="btn btn-primary"> <%= f.button :submit  %> </div>
+  </figure>
 
-<% end %>
+  <div class="headline">
+    <h2 class="text-headline"> <%= @turtle.first_name  =%> <%= @turtle.last_name =%> </h2>
+    <h3 class="text-subheadline"> <%= @turtle.description =%></h2>
+  </div>
+
+  <%= simple_form_for [@turtle, @booking] do |f| %>
+
+  <span>
+    <label class="label-both">
+    <%= f.date_field :start_date, label: 'Starting rental date', input_html: { class: 'text-body' }, required: true %>
+    </label>
+  </span>
+
+  <span>
+    <label class="label-imput label-both">
+      <%= f.date_field  :end_date, label: 'Starting rental date', input_html: { class: 'input-btn' }, required: true %>
+    </label>
+  </span>
+
+  <span class="label-btn">
+  <%= f.button :submit  %>
+  </span>
+
+  <% end %>
+</main>
+</body>
