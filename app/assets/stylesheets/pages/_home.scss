@@ -1,25 +1,32 @@
 //
 
-.turtle-card {
-    // background-size: cover;
-    background-position: center;
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
+// .turtle-card {
+//     // background-size: cover;
+//     background-position: center;
+//     height: 180px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     color: white;
+//     font-size: 24px;
+//     font-weight: bold;
+//     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//     border-radius: 5px;
+//     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+// }
 
 /////////
+
+.turtle-card {
+  border-radius: 10px;
+
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  justify-content: center;
 }
 
 // Smallest device
@@ -55,4 +62,47 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.back-button a {
+  padding-left: 65px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.container-of-index{
+  padding-right: 65px;
+  padding-left: 65px;
+}
+
+.container-title {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top:  50px;;
+}
+
+.smallest-friend {
+  font-size: 50px;
+}
+
+.find-friend a {
+  font-size: 35px;
+  text-decoration: none;
+  color: black;
+}
+
+.find-friend a:hover {
+  color: rgb(72, 69, 69);
+}
+
+.turtle-card a {
+  text-decoration: none;
+  color: black
+}
+
+li {
+  list-style-type: none
 }
