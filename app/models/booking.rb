@@ -2,9 +2,12 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :turtle
 
-  validates :start, presence: true
-  validates :end, presence: true
+  STATUSES = %w[Pending Completed Accepted Rejected Canceled]
+
+  validates :start_date, presence: true
+  validates :end_date, presence: true
   validates :full_price, presence: true
   validates :user, presence: true
   validates :turtle, presence: true
+  validates :status, inclusion: STATUSES
 end
