@@ -1,10 +1,15 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
+// .navbar-lewagon {
+//   justify-content: space-between;
+//   background: white;
+// }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  padding: 15px;
+}
+
+.logo-of-turtle {
+  width: 280px;
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -19,10 +24,59 @@
   display: flex;
 }
 
-.nav-btn {
-  background-color: #8EBB21;
+
+
+.butttons {
+  border-radius: 10px;
+  font-family: 'Roboto';
+  margin-right: 0 !important
 }
 
-.btn-nav-search{
-  border: 1px solid #8EBB21;
+.navbar {
+  display: flex;
+  // justify-content: space-between;
+}
+
+
+.ms-auto {
+  margin-left: 0 !important
+}
+
+.container-fluid img {
+  width: 60px;
+}
+
+.fa-solid {
+  width: 50px;
+}
+
+.search {
+  border: none;
+  background-color: transparent;
+  padding-left: 0px;
+}
+
+.avatar {
+  height: 60px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.addit {
+  border: none;
+  background-color: transparent;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  padding: 0 65px;
+}
+
+#navbarDropdown {
+  border-radius: 50%;
+}
+
+.black-title {
+  color: black
 }
