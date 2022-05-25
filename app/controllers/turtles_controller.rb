@@ -1,7 +1,7 @@
 class TurtlesController < ApplicationController
   def index
     @turtles = Turtle.all
-    @little_description = ['Great for a movie night', 'Enjoys ice cream and clowns', 'Can act as a hat', 'Cracks jokes every few minutes', 'Great for cuddles', 'Will make you coffee in the morning']
+    @little_description = ['Great for a movie night', 'Enjoys ice cream and clowns', 'Can act as a hat', 'Cracks jokes every few minutes', 'Great for cuddles', 'Will make you coffee in the morning', 'Makes great lasagna', 'Will do the groceries for you', 'Great pal for life']
   end
 
   def show
@@ -30,7 +30,7 @@ class TurtlesController < ApplicationController
   def update
     @turtle = Turtle.find(params[:id])
     if @turtle.update(turtle_params)
-      redirect_to turtle_path(turtle)
+      redirect_to turtle_path(@turtle)
     else
       render :new
     end

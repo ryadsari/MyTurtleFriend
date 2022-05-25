@@ -3,6 +3,14 @@
 //   background: white;
 // }
 
+.navbar {
+  position: sticky;
+  overflow: hidden;
+  background-color: white;
+  padding: 0 150px;
+}
+
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
   padding: 15px;
@@ -29,7 +37,8 @@
 .butttons {
   border-radius: 10px;
   font-family: 'Roboto';
-  margin-right: 0 !important
+  margin-right: 0 !important;
+  font-size: 14px;
 }
 
 .navbar {
@@ -56,21 +65,20 @@
   padding-left: 0px;
 }
 
-.avatar {
-  height: 60px;
-  width: 40px;
-  border-radius: 5px;
+.avatar-navbar {
+  width: 40px !important;
 }
 
 .addit {
   border: none;
   background-color: transparent;
+  font-weight: lighter;
 }
 
 .container-fluid {
   display: flex;
   justify-content: center;
-  padding: 0 65px;
+  padding: 0 !important;
 }
 
 #navbarDropdown {
@@ -80,3 +88,14 @@
 .black-title {
   color: black
 }
+
+.nav-link {
+  color: black
+}
+
+
+
+// avatar size dependent on the turtle logo size
+// cannot change home color to black
+// unable to put margin or padding o nthe whole page (turtles)
+//  .sample is not working on the description array
