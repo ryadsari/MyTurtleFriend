@@ -1,8 +1,8 @@
 <br><br><br><br><br>
-<div class="container">
+<p class="back-button"><%= link_to '<', home_path %></p>
+<div class="container-of-index">
   <div class="cards">
     <% @turtles.each do |turtle| %>
-<<<<<<< HEAD
       <li class="turtle-card">
         <%= link_to turtle.first_name, turtle_path(turtle), class: "turtle-link-names"%>
         <%= link_to turtle.last_name, turtle_path(turtle), class:"turtle-link-names" %>
@@ -13,14 +13,6 @@
           <%= image_tag 'cuteturtle.jpg', height: 300, width: 400, crop: :fill %>
         <% end %>
       </li>
-=======
-    <div class="turtle-card">
-      <%= link_to turtle.first_name, turtle_path(turtle), class: "turtle-link-names"%>
-      <%= link_to turtle.last_name, turtle_path(turtle), class:"turtle-link-names" %>
-      <%= @little_description.sample %>
-      <%= link_to (image_tag 'cuteturtle.jpg', height: 150), turtle_path(turtle)%>
-    </div>
->>>>>>> 6bc5fe4149b2c69f8075d71e7f0e0c8f79e007c3
     <% end %>
   </div>
 </div>

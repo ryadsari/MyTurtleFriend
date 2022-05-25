@@ -1,4 +1,5 @@
 <div class="container">
+<%= link_to '<', turtles_path %>
   <p class="description-container">
     <div class="names">
       </div><%= @turtle.first_name %>
@@ -14,5 +15,5 @@
 </div>
 
 <%= link_to 'Edit', edit_turtle_path(@turtle), class: "btn btn-primary"%>
-<%= link_to 'Book', new_turtle_booking_path(turtle_id: @turtle.id), class: "btn btn-primary"%>
+<%= link_to 'Book', new_turtle_booking_path(turtle_id: @turtle.id, first_name: @turtle.first_name), class: "btn btn-primary"%>
 <%= link_to 'Back', turtles_path, class: "btn btn-info" %>

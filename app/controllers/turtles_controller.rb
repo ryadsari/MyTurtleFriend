@@ -1,7 +1,7 @@
 class TurtlesController < ApplicationController
   def index
     @turtles = Turtle.all
-    @little_description = ['Great for a movie night', 'Enjoys ice cream and clowns', 'Can camouflage as a hat', 'Cracks jokes every few minutes', 'Great for cuddles', 'Will make you coffee in the morning']
+    @little_description = ['Great for a movie night', 'Enjoys ice cream and clowns', 'Can act as a hat', 'Cracks jokes every few minutes', 'Great for cuddles', 'Will make you coffee in the morning']
   end
 
   def show
@@ -39,7 +39,6 @@ class TurtlesController < ApplicationController
   private
 
   def turtle_params
-    params.require(:turtle).permit(:first_name, :last_name, :photo, :description, :price)
-
+    params.require(:turtle).permit(:first_name, :last_name, :price, :description, :photo)
   end
 end
