@@ -5,6 +5,7 @@ class Turtle < ApplicationRecord
   has_one_attached :photo
 
   has_many :bookings, dependent: :destroy
+  has_many :reviews, dependent: :destroy
 
 
   # first step for better search to add later if we have time
