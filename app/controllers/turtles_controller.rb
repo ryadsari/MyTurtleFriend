@@ -1,4 +1,6 @@
 class TurtlesController < ApplicationController
+  before_action :set_turtle, only: [:show, :edit, :update, :destroy]
+
   def index
     @little_description = ['Great for a movie night', 'Enjoys ice cream and clowns', 'Can act as a hat', 'Cracks jokes every few minutes', 'Great for cuddles', 'Will make you coffee in the morning', 'Makes great lasagna', 'Will do the groceries for you', 'Great pal for life']
     if params[:query].present?
@@ -13,6 +15,11 @@ class TurtlesController < ApplicationController
 
   def new
     @turtle = Turtle.new
+  end
+
+  def destroy
+    @turtle.destroy
+    redirect_to turtles_path
   end
 
   def create
@@ -40,6 +47,10 @@ class TurtlesController < ApplicationController
   end
 
   private
+
+  def set_turtle
+    @turtle = Turtle.find(params[:id])
+  end
 
   def turtle_params
     params.require(:turtle).permit(:first_name, :last_name, :price, :description, :photo)
