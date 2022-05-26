@@ -4,7 +4,11 @@ class TurtlesController < ApplicationController
   def index
     @little_description = ['Great for a movie night', 'Enjoys ice cream and clowns', 'Can act as a hat', 'Cracks jokes every few minutes', 'Great for cuddles', 'Will make you coffee in the morning', 'Makes great lasagna', 'Will do the groceries for you', 'Great pal for life']
     if params[:query].present?
-      @turtles = Turtle.where("first_name ILIKE ?", "%#{params[:query]}%")
+      sql_query = " \
+        turtles.first_name @@ :query \
+        OR turtles.last_name @@ :query \
+      "
+      @turtles = Turtle.where(sql_query, query: "%#{params[:query]}%")
     else
       @turtles = Turtle.all
     end
