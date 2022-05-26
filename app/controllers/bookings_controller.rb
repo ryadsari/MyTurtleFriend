@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.last
     @bookings = current_user.bookings
     @turtle = current_user.bookings.last.turtle
-    @turtles = current.user.turtles
+
   end
 
   def new
