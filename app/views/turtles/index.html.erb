@@ -5,18 +5,19 @@
       <% @turtles.each do |turtle| %>
         <li class="turtle-card">
          <% if turtle.photo.attached? %>
-            <%= link_to (cl_image_tag turtle.photo.key, crop: :fill), turtle_path(turtle), class: "turtle-photo" %>
+            <%= link_to (cl_image_tag turtle.photo.key, crop: :fill, class: "turtle-photo"), turtle_path(turtle)%>
           <% else %>
             <%= image_tag 'cuteturtle.jpg',  crop: :fill, class: "turtle-photo" %>
           <% end %>
           <div class="names">
             <%= link_to turtle.first_name, turtle_path(turtle), class: "turtle-link-names"%>
-            <%= link_to turtle.last_name, turtle_path(turtle), class:"turtle-link-names" %>          </div>
+            <%= link_to turtle.last_name, turtle_path(turtle), class:"turtle-link-names" %>
+            </div>
           <div class="description-turtle">
-            <%= @little_description.sample %>
+            <%= turtle.description %>
           </div>
           <div class="turtle-price">
-          <%= rand(60) %> <%= "€ / day" %>
+          <%= turtle.price %> <%= "€" %>
           </div>
         </li>
       <% end %>

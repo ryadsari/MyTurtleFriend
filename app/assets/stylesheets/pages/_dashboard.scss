@@ -1,0 +1,51 @@
+.conf-flex-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 150px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  }
+
+.conf-flex-item-left {
+  width: 44%;
+  margin: 20px 0px 20px 20px;
+}
+
+.total-price {
+  font-weight: 600;
+}
+
+.conf-flex-item-right {
+  width: 40%;
+  margin: 20px 20px 20px 0px;
+}
+
+.booking-container {
+  background-color: #dfdede;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.message-container {
+  width: 100%;
+  text-align: center;
+}
+
+h2, h3, p {
+  color: #494949;
+}
+
+.conf-photo {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .conf-flex-item-right, .conf-flex-item-left {
+    flex: 100%;
+  }
+}

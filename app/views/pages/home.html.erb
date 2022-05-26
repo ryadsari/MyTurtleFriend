@@ -6,3 +6,31 @@
     </div>
   </div>
 </div>
+
+
+<div class="container">
+  <div class="featured">
+  <h1>Our Finest Turtles</h1>
+  </div>
+    <div class="cards">
+      <% @featured_turtles.each do |turtle| %>
+        <li class="turtle-card">
+          <% if turtle.photo.attached? %>
+            <%= link_to (cl_image_tag turtle.photo.key, crop: :fill, class: "turtle-photo"), turtle_path(turtle)%>
+          <% else %>
+            <%= image_tag 'cuteturtle.jpg',  crop: :fill, class: "turtle-photo" %>
+          <% end %>
+          <div class="names">
+            <%= link_to turtle.first_name, turtle_path(turtle), class: "turtle-link-names"%>
+            <%= link_to turtle.last_name, turtle_path(turtle), class:"turtle-link-names" %>
+          </div>
+          <div class="description-turtle">
+            <%= turtle.description %>
+          </div>
+          <div class="turtle-price">
+          <%= turtle.price %> <%= "€" %>
+          </div>
+        </li>
+      <% end %>
+    </div>
+</div>
