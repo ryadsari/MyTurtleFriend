@@ -12,6 +12,12 @@
           <div class="names">
             <%= link_to turtle.first_name, turtle_path(turtle), class: "turtle-link-names"%>
             <%= link_to turtle.last_name, turtle_path(turtle), class:"turtle-link-names" %>
+            <%= link_to 'Edit', edit_turtle_path(turtle), class: "turtle-link-names"%>
+            <%= link_to "Remove", turtle_path(turtle),
+                method: :delete,
+                data: { confirm: "Are you sure?" },
+                class: 'ms-3 text-danger'
+            %>
           </div>
           <div class="description-turtle">
             <%= @little_description.sample %>

@@ -5,7 +5,12 @@ class BookingsController < ApplicationController
   before_action :set_price, only: [:update, :destroy]
 
   def show
-    @bookings = Booking.all
+    # @bookings = Booking.all
+    @user = current_user
+    @booking = current_user.bookings.last
+    @bookings = current_user.bookings
+    @turtle = current_user.bookings.last.turtle
+    @turtles = current.user.turtles
   end
 
   def new
@@ -15,7 +20,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.turtle_id = params[:turtle_id]
+    @booking.turtle = Turtle.find(params[:turtle_id])
     @booking.user = current_user
     start_d = params[:booking]["start_date"].to_date
     end_d = params[:booking]["end_date"].to_date
@@ -34,6 +39,8 @@ class BookingsController < ApplicationController
   end
 
   private
+
+
 
   def set_booking
     @booking = Booking.find(params[:id])
