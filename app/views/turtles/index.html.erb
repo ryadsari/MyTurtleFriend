@@ -4,16 +4,27 @@
     <div class="cards">
       <% @turtles.each do |turtle| %>
         <li class="turtle-card">
+         <% if turtle.photo.attached? %>
+            <%= link_to (cl_image_tag turtle.photo.key, crop: :fill), turtle_path(turtle), class: "turtle-photo" %>
+          <% else %>
+            <%= image_tag 'cuteturtle.jpg',  crop: :fill, class: "turtle-photo" %>
+          <% end %>
           <div class="names">
             <%= link_to turtle.first_name, turtle_path(turtle), class: "turtle-link-names"%>
             <%= link_to turtle.last_name, turtle_path(turtle), class:"turtle-link-names" %>
+            <%= link_to 'Edit', edit_turtle_path(turtle), class: "turtle-link-names"%>
+            <%= link_to "Remove", turtle_path(turtle),
+                method: :delete,
+                data: { confirm: "Are you sure?" },
+                class: 'ms-3 text-danger'
+            %>
           </div>
-          <%= @little_description.sample %>
-          <% if turtle.photo.attached? %>
-            <%= link_to (cl_image_tag turtle.photo.key, height: 300, width: 400, crop: :fill), turtle_path(turtle), class: "turtle-photo" %>
-          <% else %>
-            <%= image_tag 'cuteturtle.jpg', height: 300, width: 400, crop: :fill, class: "turtle-photo" %>
-          <% end %>
+          <div class="description-turtle">
+            <%= @little_description.sample %>
+          </div>
+          <div class="turtle-price">
+          <%= rand(60) %> <%= "€" %>
+          </div>
         </li>
       <% end %>
     </div>
