@@ -5,10 +5,9 @@
 
 .navbar {
   position: sticky;
-  background-color: white;
+  background-color: rgb(243, 243, 243);
   width: 100%;
   display: flex;
-  // justify-content: center;
 
   .container-fluid {
     width: 800px;
@@ -103,7 +102,7 @@
 
 .fa-regular {
   font-size: 22px;
-  color: black;
+  color: #2c602a;
 }
 
 .black-title {

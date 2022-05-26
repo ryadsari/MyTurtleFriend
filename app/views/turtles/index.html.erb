@@ -1,7 +1,7 @@
 <div class="body">
   <p class="back-button"><%= link_to '<', home_path %></p>
   <div class="container-of-index">
-    <div class="cards">
+    <div link_to, turtle_path(@turtle), class="cards">
       <% @turtles.each do |turtle| %>
         <li class="turtle-card">
          <% if turtle.photo.attached? %>
