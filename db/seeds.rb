@@ -15,6 +15,9 @@ require 'faker'
 User.destroy_all
 Turtle.destroy_all
 
+User.create(first_name: 'admin', last_name: 'admin0', email: 'admin@gmail.com', password: 'admin123', password_confirmation: 'admin123')
+
+
 20.times do
   user = User.create!(
     first_name: Faker::Name.first_name,
