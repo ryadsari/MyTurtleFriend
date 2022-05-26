@@ -66,6 +66,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-# out code
+# CUSTOM code
 
 gem 'devise'
+gem 'pg_search', '~> 2.3.0'
+gem 'flatpickr_rails', '~> 1.1'
