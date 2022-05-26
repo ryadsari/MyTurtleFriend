@@ -7,10 +7,16 @@
   <strong>Start Date: <%= @booking.start_date %></strong> | <strong>End Date: <%= @booking.end_date %></strong>
 
   <h4><strong><%= @booking.turtle.first_name %> <%= @booking.turtle.last_name %></strong></h4>
-  <p>Location: <%= @booking.price %></p>
+  <p>Price: <%= @booking.full_price %></p>
   <p><%= @booking.turtle.description %></p>
 
-  <div class="booking-image"><br>
-    <img src=<%= @booking.turtle.photo %> alt="Your Turtle photo" width="1000" class="img-responsive">
+  <div><br>
+      <div class="photo">
+        <% if @booking.turtle.photo.attached? %>
+          <%= cl_image_tag @turtle.photo.key, height: 300, width: 400, crop: :fill, class: 'turtle-photo'%>
+        <% else %>
+          <%= image_tag 'cuteturtle.jpg', height: 300, width: 400, crop: :fill, class: 'turtle-photo' %>
+        <% end %>
+      </div>
   </div>
 </div>

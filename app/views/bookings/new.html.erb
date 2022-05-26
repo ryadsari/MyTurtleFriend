@@ -1,8 +1,13 @@
 <body>
 
+
+
 <main>
   <figure>
     <picture>
+    <% if @turtle.photo.attached? %>
+          <%= cl_image_tag @turtle.photo.key, width: 768, crop: :fill, class: 'turtle-photo'%>
+        <% else %>
 
       <source  media="(min-width: 768px)"
               srcset="/assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg     340w,
@@ -17,6 +22,7 @@
                       (min-width: 640px) 580px" />
       <img       src="/assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg"
                   alt="Your new budy !" />
+                  <% end %>
     </picture>
 
   </figure>
