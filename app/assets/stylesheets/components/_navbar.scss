@@ -5,9 +5,14 @@
 
 .navbar {
   position: sticky;
-  // overflow: hidden;
   background-color: white;
-  padding: 0 150px;
+  width: 100%;
+  display: flex;
+  // justify-content: center;
+
+  .container-fluid {
+    width: 800px;
+  }
 }
 
 
@@ -17,7 +22,8 @@
 }
 
 .logo-of-turtle {
-  width: 280px;
+  font-size: 25px;
+  color:  #2c602a;
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -55,8 +61,22 @@
   width: 60px;
 }
 
-.fa-solid {
+.fa-magnifying-glass {
   width: 50px;
+  color: #2c602a;
+  transition: transform 2s ease, border 2s ease;
+
+
+  &:hover {
+    border-radius: 50%;
+    background-color: #2c602a;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 2px;
+    background-clip: content-box;
+    transition: transform 1s ease, border 1s ease;
+    color: white
+  }
 }
 
 .search {
@@ -81,8 +101,9 @@
   padding: 0 !important;
 }
 
-#navbarDropdown {
-  border-radius: 50%;
+.fa-regular {
+  font-size: 22px;
+  color: black;
 }
 
 .black-title {

@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-      <%= link_to (image_tag 'turtle-cute-logo'), home_path, class: "logo-of-turtle" %>
+      <%= link_to raw('<i class="fa-solid fa-frog"></i>'), home_path, class: "logo-of-turtle" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,11 +15,8 @@
 
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li>
-            <%= link_to 'Add your Turtle', new_turtle_path, class: 'btn nav-btn my-2 my-sm-0 ms-2 butttons addit' %>
-          </li>
           <li class="nav-item dropdown">
-            <%= image_tag "black.gif", class: "avatar-navbar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= link_to raw('<i class="fa-regular fa-user"></i>'), class: "avatar-navbar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Dashboard", "dashboard_path", class: "dropdown-item" %>
               <%= link_to "My Account", edit_user_registration_path, class: "dropdown-item" %>
