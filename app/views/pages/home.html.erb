@@ -10,3 +10,7 @@
 <% Turtle.all.sample(3).each do |turtle| %>
 <%= turtle.first_name %>
 <% end %>
+
+<% vr = Turtle.all%>
+<%= vr[0].photo  %>
+<%= image_tag(vr[0].photo) %>
