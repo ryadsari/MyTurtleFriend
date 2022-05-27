@@ -14,6 +14,7 @@ class TurtlesController < ApplicationController
   end
   def show
     @turtle = Turtle.find(params[:id])
+    @reviewers = ["Liam", "Olivia", "Noah", "Emma", "Oliver", "Charlotte", "Elijah", "Amelia", "James", "Ava", "William"]
   end
 
   def new

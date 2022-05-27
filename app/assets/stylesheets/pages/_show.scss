@@ -67,3 +67,52 @@
   font-weight: normal;
   font-size: 18px;
 }
+
+.review {
+  color: #494848;
+  font-weight: lighter;
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-evenly;
+}
+.review-item {
+  background-color: transparent;
+  border: none;
+  padding-top: 30px;
+  padding-right: 30px;
+}
+
+.rating {
+  color: #2c602a;
+  font-weight: lighter;
+}
+
+label {
+  padding: 10px;
+}
+
+.review-form {
+  color: #494848;
+  font-weight: lighter;
+}
+
+select {
+  color: #494848;
+  font-weight: lighter;
+}
+
+.form-control::placeholder  {
+  color: #494848;
+  font-weight: lighter;
+}
+
+.review-button {
+    font-weight: lighter;
+    padding: 10px;
+    background-color: #2c602a;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 10px;
+}
