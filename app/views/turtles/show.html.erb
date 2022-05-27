@@ -25,3 +25,12 @@
   </div>
 
 </div>
+<div class="navigators">
+  <%= link_to 'Edit', edit_turtle_path(@turtle), class: "butttton"%>
+  <%= link_to "Remove", turtle_path(@turtle),
+    method: :delete,
+    data: { confirm: "Are you sure?" },
+    class: "butttton"
+  %>
+  <%= link_to 'Book', new_turtle_booking_path(turtle_id: @turtle.id), class: "butttton"%>
+</div>
