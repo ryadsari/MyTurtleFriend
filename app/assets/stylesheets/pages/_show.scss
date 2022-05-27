@@ -1,9 +1,8 @@
 .container {
-  height: 100vh;
   padding-top: 200px;
 
   .description-container {
-    height: 100vh;
+    height: 150vh;
     display: block;
     justify-content: center;
     align-items: center;
@@ -15,48 +14,56 @@
       justify-content: center;
 
       .names {
-        font-size: 30px;
+        font-size: 25px;
         padding-bottom: 20px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
 
-      }
-
-      .photo {
-        display: flex;
-        justify-content: center;
-
-        .turtle-photo {
-          height: 400px;
-          width: 820px;
-        }
-      }
-
-      .details {
-        padding-left: 20px;
-        padding-top: 50px;
-        width: 100%;
-        padding: 50px 0 !important;
       }
     }
+    .detail {
+      width: 100%;
+      margin: 50px 0;
+      font-weight: lighter;
+    }
   }
-  .navigators {
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+
+  #turtles-photo {
+    height: 400px !important;
+    width: 810px !important;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+}
+
+
+.butttton {
+  text-decoration: none;
+    color: black;
+    font-size: 15px;
+    padding-left: 8px;
+
+  .butttton a {
     text-decoration: none;
-      color: black;
-      padding-top: 20px;
-      padding-right: 20px;
+    color: black;
+    padding-top: 20px;
+    padding-right: 20px;
 
-    .navigators a {
+    &:hover {
+      font-weight: bold;
       text-decoration: none;
-      color: black;
-      padding-top: 20px;
-      padding-right: 20px;
-
-      &:hover {
-        font-weight: bold;
-        color: rgb(73, 72, 72);
-        text-decoration: none;
-      }
     }
   }
+}
+
+.reviews-for {
+  font-family: 'Roboto';
+  color: black;
+  font-weight: normal;
+  font-size: 18px;
 }
