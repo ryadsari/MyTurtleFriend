@@ -18,6 +18,7 @@
 
 .search-button {
   border-radius: 50px;
+  box-shadow:  0 3px 3px rgba(0,0,0,0.12);
 }
 
 
@@ -29,6 +30,10 @@
 .logo-of-turtle {
   font-size: 25px;
   color:  #2c602a;
+
+  .logo-of-turtle:hover {
+    color: #2c602a
+  }
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -43,7 +48,9 @@
   display: flex;
 }
 
-
+.fa-frog:hover {
+  color: #2c602a
+}
 
 .butttons {
   border-radius: 10px;
@@ -87,7 +94,8 @@
 
 
 .avatar-navbar {
-  width: 24px !important;
+  width: 24px !important ;
+  cursor: pointer !important;
 }
 
 .addit {
@@ -114,6 +122,7 @@
 .nav-link {
   color: black
 }
+
 
 
 
