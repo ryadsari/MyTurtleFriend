@@ -29,6 +29,10 @@ jose =        User.create(first_name: 'Jose', last_name: 'Loayza', email: 'jose@
 jaqueline =   User.create(first_name: 'Jaqueline', last_name: 'Maldonado', email: 'jaqueline@gmail.com', password: 'jaqueline123', password_confirmation: 'jaqueline123')
 patricio =    User.create(first_name: 'Patricio', last_name: 'Perez Herrero', email: 'patricio@gmail.com', password: 'patricio123', password_confirmation: 'patricio123')
 
+
+
+
+
 # all the turtles
 file = URI.open('https://res.cloudinary.com/dlzusxobf/image/upload/v1653575355/development/5_ndptts.jpg')
 raphael = Turtle.new(first_name: 'Raphael', last_name: 'Turtle', description: "the one and the only Raphael", price: '50')
@@ -103,7 +107,23 @@ flipper.photo.attach(io: file, filename: 'flipper.png', content_type: 'image/jpg
 flipper.user = patricio
 flipper.save
 
-# old seeds
+Turtle.all.each do |turtle|
+  review_seed = Review.create(rating: '5', comment: "such a nice turtle ! we had an amazing time this was great liek so great oh my god so great amazing like freaking amzing wow so good amazing I really recomand !")
+  review_seed.turtle_id = turtle.id
+  review_seed.save
+end
+Turtle.all.each do |turtle|
+  review_seed = Review.create(rating: '5', comment: "such a nice turtle ! we had an amazing time this was great liek so great oh my god so great amazing like freaking amzing wow so good amazing I really recomand !")
+  review_seed.turtle_id = turtle.id
+  review_seed.save
+end
+Turtle.all.each do |turtle|
+  review_seed = Review.create(rating: '5', comment: "such a nice turtle ! we had an amazing time this was great liek so great oh my god so great amazing like freaking amzing wow so good amazing I really recomand !")
+  review_seed.turtle_id = turtle.id
+  review_seed.save
+end
+
+  # old seeds
 
 
 # 20.times do
