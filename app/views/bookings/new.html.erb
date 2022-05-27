@@ -1,58 +1,44 @@
-<body>
-
-
-
-<main>
-  <figure>
-    <picture>
-    <% if @turtle.photo.attached? %>
-          <%= cl_image_tag @turtle.photo.key, width: 768, crop: :fill, class: 'turtle-photo'%>
+<div class="container">
+  <div class="description-container">
+    <div class="main-content">
+      <div class="names">
+        <div class="name">
+          <h2 class="text-headline"> <%= @turtle.first_name  =%> <%= @turtle.last_name =%> </h2>
+        </div>
+        <div class="navigators">
+        </div>
+      </div>
+      <div class="photo">
+        <% if @turtle.photo.attached? %>
+          <%= cl_image_tag @turtle.photo.key, crop: :fill, class: 'turtle-photo', id: 'turtles-photo'%>
         <% else %>
+          <%= image_tag 'cuteturtle.jpg', crop: :fill, class: 'turtle-photo', id: 'turtles-photo' %>
+        <% end %>
+      </div>
+    </div>
+    <div class="details">
+      <p class="detail"> <%= @turtle.description%> <p>
+    </div>
+    <%= simple_form_for [@turtle, @booking] do |f| %>
 
-      <source  media="(min-width: 768px)"
-              srcset="/assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg     340w,
-                      /assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg     680w,
-                      /assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg    1020w"
-                sizes="360px" />
-      <source srcset="/assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg      340w,
-                      /assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg      680w,
-                      /assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg     1020w"
-                sizes="(min-width: 320px) 290px,
-                      (min-width: 480px) 435px
-                      (min-width: 640px) 580px" />
-      <img       src="/assets/cuteturtle-721b5d772ce02e17f8b1e7651e0065b1fcd0e61238aed857a9ed1eaed6565d53.jpg"
-                  alt="Your new budy !" />
-                  <% end %>
-    </picture>
+    <span>
+      <label class="label-both">
+      <%= f.input :start_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+      </label>
+    </span>
 
-  </figure>
+    <span>
+      <label class="label-imput label-both">
+        <%= f.input :end_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+      </label>
+    </span>
 
-  <div class="headline">
-    <h2 class="text-headline"> <%= @turtle.first_name  =%> <%= @turtle.last_name =%> </h2>
-    <h3 class="text-subheadline"> <%= @turtle.description =%></h2>
+    <span class="label-btn">
+    <%= f.button :submit  %>
+    </span>
+
+    <% end %>
+
+    </div>
   </div>
-
-  <%= simple_form_for [@turtle, @booking] do |f| %>
-
-  <span>
-    <label class="label-both">
-    <%= f.input :start_date, as: :string, required: true, input_html: {class: "datepicker"} %>
-    </label>
-  </span>
-
-  <span>
-    <label class="label-imput label-both">
-      <%= f.input :end_date, as: :string, required: true, input_html: {class: "datepicker"} %>
-    </label>
-  </span>
-
-  <span class="label-btn">
-  <%= f.button :submit  %>
-  </span>
-
-  <% end %>
-
-
-
-</main>
-</body>
+</div>
