@@ -116,3 +116,13 @@ select {
     font-size: 15px;
     border-radius: 10px;
 }
+
+.review-button:hover {
+  font-weight: lighter;
+  padding: 10px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  background-color: #2c602a;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 10px;
+}
