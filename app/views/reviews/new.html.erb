@@ -5,12 +5,14 @@
       <div class="col-6 m-auto">
         <div class="turtle-form">
           <h1>Add a new review for <%= @turtle.first_name %> <%= @turtle.last_name %></h1>
-          <div class="mt-3 mb-4">
-            <%= simple_form_for [ @turtle, @review ] do |f| %>
-              <%= f.input :rating %>
-              <%= f.input :comment %>
-              <%= f.submit "Submit review", class: "btn btn-primary" %>
-            <% end %>
+          <div class="mt-3 mb-4 review-form">
+             <%= simple_form_for [@turtle, @review] do |f| %>
+                <label for="review">How was your experience?</label><br>
+                <%= f.label :rating %>
+                <%= f.select :rating, options_for_select([["Please select one", ""], 5, 4, 3, 2, 1]) %>
+                <%= f.input :comment, placeholder:"Please enter your comment here" %>
+                <%= f.submit "Submit your review", class: "btn review-button" %> <br><br>
+              <% end %>
           </div>
         </div>
       </div>
