@@ -26,17 +26,26 @@
       </div>
     </div>
     <div class="details">
-      <p class="detail"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean sed adipiscing diam donec adipiscing tristique risus. Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Et leo duis ut diam quam nulla. Faucibus a pellentesque sit amet porttitor. Dolor magna eget est lorem ipsum. Sem et tortor consequat id porta. Urna et pharetra pharetra massa. Euismod elementum nisi quis eleifend. Ac turpis egestas integer eget.<p>
+      <p class="detail"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean sed adipiscing diam donec adipiscing tristique risus. Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Et leo duis ut diam quam nulla. Faucibus a pellentesque sit amet porttitor. Dolor magna eget est lorem ipsum. Sem et tortor consequat id porta. Urna et pharetra pharetra massa. Euismod elementum nisi quis eleifend. Ac turpis egestas integer eget.</p>
     </div>
+    <div>
       <h2 class="reviews-for">Reviews for <%= @turtle.first_name %></h2>
       <div class="reviews">
         <% @turtle.reviews.each do |review| %>
-          <div class="review-item"><span><h3><%= @reviewers.sample %></h3></span><span class="rating"><%= "*" * review.rating %></span> <br> <span class="review"> <%= review.comment %></span></div>
-          <% end %>
-        </div>
-
-
-
+          <div class="review-item">
+            <span>
+              <h3><%= @reviewers.sample %></h3>
+            </span><span class="rating"><%= "*" * review.rating %></span>
+            <br><span class="review"> <%= review.comment %></span>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
+<style>
+.footer {
+  display: none;
+}
+</style>
