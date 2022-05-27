@@ -1,9 +1,9 @@
 <div class="container">
   <div class="description-container">
     <div class="main-content">
-      <div class="names">
+      <div class="names2">
         <div class="name">
-          <h2 class="text-headline"> <%= @turtle.first_name  =%> <%= @turtle.last_name =%> </h2>
+          <h2 class=""> <%= @turtle.first_name  =%> <%= @turtle.last_name =%> </h2>
         </div>
         <div class="navigators">
         </div>
@@ -16,29 +16,15 @@
         <% end %>
       </div>
     </div>
-    <div class="details">
+    <div class="names2">
       <p class="detail"> <%= @turtle.description%> <p>
     </div>
+
     <%= simple_form_for [@turtle, @booking] do |f| %>
-
-    <span>
-      <label class="label-both">
-      <%= f.input :start_date, as: :string, required: true, input_html: {class: "datepicker"} %>
-      </label>
-    </span>
-
-    <span>
-      <label class="label-imput label-both">
-        <%= f.input :end_date, as: :string, required: true, input_html: {class: "datepicker"} %>
-      </label>
-    </span>
-
-    <span class="label-btn">
-    <%= f.button :submit  %>
-    </span>
-
+      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.button :submit  %>
     <% end %>
-
     </div>
   </div>
 </div>
