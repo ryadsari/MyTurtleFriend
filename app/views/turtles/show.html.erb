@@ -2,8 +2,14 @@
   <div class="description-container">
     <div class="main-content">
       <div class="names">
-        <%= @turtle.first_name %>
-        <%= @turtle.last_name %>
+        <div class="name">
+          <%= @turtle.first_name %>
+          <%= @turtle.last_name %>
+        </div>
+        <div class="navigators">
+          <%= link_to 'Edit', edit_turtle_path(@turtle), class: "butttton"%>
+          <%= link_to 'Book', new_turtle_booking_path(turtle_id: @turtle.id), class: "butttton"%>
+        </div>
       </div>
       <div class="photo">
         <% if @turtle.photo.attached? %>
@@ -14,11 +20,8 @@
       </div>
     </div>
     <div class="details">
-    <%= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean sed adipiscing diam donec adipiscing tristique risus. Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Et leo duis ut diam quam nulla. Faucibus a pellentesque sit amet porttitor. Dolor magna eget est lorem ipsum. Sem et tortor consequat id porta. Urna et pharetra pharetra massa. Euismod elementum nisi quis eleifend. Ac turpis egestas integer eget.' %>
+      <%= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean sed adipiscing diam donec adipiscing tristique risus. Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Et leo duis ut diam quam nulla. Faucibus a pellentesque sit amet porttitor. Dolor magna eget est lorem ipsum. Sem et tortor consequat id porta. Urna et pharetra pharetra massa. Euismod elementum nisi quis eleifend. Ac turpis egestas integer eget.' %>
     </div>
   </div>
-  <div class="navigators">
-    <%= link_to 'Edit', edit_turtle_path(@turtle), class: "butttton"%>
-    <%= link_to 'Book', new_turtle_booking_path(turtle_id: @turtle.id), class: "butttton"%>
-  </div>
+
 </div>
