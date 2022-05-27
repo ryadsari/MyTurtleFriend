@@ -42,4 +42,12 @@
     class: "butttton"
   %>
   <%= link_to 'Book', new_turtle_booking_path(turtle_id: @turtle.id), class: "butttton"%>
+
+  <h2>Reviews for the turtle <%= @turtle.first_name  %></h2>
+<ul class="list-group">
+  <% @turtle.reviews.each do |review| %>
+    <li class="list-group-item"><%= "*" * review.rating %> <%= review.comment %></li>
+  <% end %>
+</ul>
+<%= link_to 'Leave a review', new_turtle_review_path(@turtle), class: "btn btn-warning" %>
 </div>

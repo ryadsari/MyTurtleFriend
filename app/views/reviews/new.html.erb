@@ -1,0 +1,19 @@
+<div class="container">
+  <%#= link_to 'Back', @turtle_path %>
+  <div class="container mt-4 mb-4">
+    <div class="row">
+      <div class="col-6 m-auto">
+        <div class="turtle-form">
+          <h1>Add a new review for <%= @turtle.first_name %> <%= @turtle.last_name %></h1>
+          <div class="mt-3 mb-4">
+            <%= simple_form_for [ @turtle, @review ] do |f| %>
+              <%= f.input :rating %>
+              <%= f.input :comment %>
+              <%= f.submit "Submit review", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
