@@ -65,13 +65,15 @@ li {
 
 
 .names {
+  padding-top: 5px;
   padding-bottom: 0 !important;
+
+  .names a:hover {
+    color: rgb(73, 72, 72);
+    font-weight: bold;
+  }
 }
 
-.names a:hover {
-  color: rgb(73, 72, 72);
-  font-weight: bold;
-}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
