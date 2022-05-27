@@ -1,5 +1,4 @@
 .container {
-  padding-top: 200px;
 
   .description-container {
     height: 150vh;
@@ -18,13 +17,22 @@
         padding-bottom: 20px;
         display: flex;
         justify-content: space-between;
+        padding-top: 100px;
 
+        .name {
+          padding-bottom: 15px;
+        }
       }
     }
-    .detail {
-      width: 100%;
-      margin: 50px 0;
-      font-weight: lighter;
+
+    .details {
+      border-bottom: solid 1px rgb(179, 178, 178);
+      padding: 15px 0;
+
+      .detail {
+        width: 100%;
+        font-weight: lighter;
+      }
     }
   }
 }
@@ -32,11 +40,12 @@
 .photo {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 
   #turtles-photo {
     height: 400px !important;
     width: 810px !important;
-    margin: 20px 0;
+    margin-bottom: 20px;
     border-radius: 10px;
   }
 }
@@ -66,4 +75,5 @@
   color: black;
   font-weight: normal;
   font-size: 18px;
+  padding: 20px 0;
 }
