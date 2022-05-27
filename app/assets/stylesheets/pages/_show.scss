@@ -15,41 +15,41 @@
       justify-content: center;
 
       .names {
-        font-size: 30px;
+        font-size: 25px;
         padding-bottom: 20px;
         display: flex;
         justify-content: space-between;
 
       }
-
-      .photo {
-        display: flex;
-        justify-content: center;
-        border-radius: 10px;
-
-        .turtle-photo {
-          height: 400px;
-          width: 820px;
-          margin: 30px 0;
-        }
-      }
-
-      .details {
-        padding-left: 20px;
-        padding-top: 50px;
-        width: 100%;
-        margin: 50px 0 !important;
-        font-weight: lighter;
-      }
+    }
+    .detail {
+      width: 100%;
+      margin: 50px 0;
+      font-weight: lighter;
     }
   }
 }
 
-.navigators {
+.photo {
+  display: flex;
+  justify-content: center;
+
+  #turtles-photo {
+    height: 400px !important;
+    width: 810px !important;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+}
+
+
+.butttton {
   text-decoration: none;
     color: black;
+    font-size: 15px;
+    padding-left: 8px;
 
-  .navigators a {
+  .butttton a {
     text-decoration: none;
     color: black;
     padding-top: 20px;
@@ -57,8 +57,14 @@
 
     &:hover {
       font-weight: bold;
-      color: rgb(73, 72, 72);
       text-decoration: none;
     }
   }
+}
+
+.reviews-for {
+  font-family: 'Roboto';
+  color: black;
+  font-weight: normal;
+  font-size: 18px;
 }
