@@ -60,32 +60,28 @@
   width: 60px;
 }
 
-.fa-magnifying-glass {
-  width: 50px;
-  color: #2c602a;
-  transition: transform 2s ease, border 2s ease;
-
-
-  &:hover {
-    border-radius: 50%;
-    background-color: #2c602a;
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 2px;
-    background-clip: content-box;
-    transition: transform 1s ease, border 1s ease;
-    color: white
-  }
-}
 
 .search {
   border: none;
   background-color: transparent;
-  padding-left: 0px;
+  height: 40px;
+  width: 50px;
+  border-radius: 50%;
+  color: #2c602a;
+  margin-left: 10px;
+
+
+  &:hover {
+    // background-clip: content-box;
+    color: white;
+    background-color: #2c602a;
+  }
 }
 
+
+
 .avatar-navbar {
-  width: 40px !important;
+  width: 24px !important;
 }
 
 .addit {
