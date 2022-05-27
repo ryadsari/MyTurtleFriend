@@ -1,26 +1,37 @@
 <div class="body">
   <p class="back-button"><%= link_to '<', home_path %></p>
   <div class="container-of-index">
-    <div link_to, turtle_path(@turtle), class="cards">
+    <div class="cards">
       <% @turtles.each do |turtle| %>
-        <li class="turtle-card">
-         <% if turtle.photo.attached? %>
-            <%= link_to (cl_image_tag turtle.photo.key, crop: :fill, class: "turtle-photo"), turtle_path(turtle)%>
+
+      <%#= link_to, turtle_path(turtle) do %>
+
+        <div class="turtle-card">
+
+          <% if turtle.photo.attached? %>
+          <%= link_to (cl_image_tag turtle.photo.key, crop: :fill, class: "turtle-photo"), turtle_path(turtle)%>
           <% else %>
             <%= image_tag 'cuteturtle.jpg',  crop: :fill, class: "turtle-photo" %>
           <% end %>
+
           <div class="names">
             <%= link_to turtle.first_name, turtle_path(turtle), class: "turtle-link-names"%>
             <%= link_to turtle.last_name, turtle_path(turtle), class:"turtle-link-names" %>
-            </div>
+          </div>
+
           <div class="description-turtle">
             <%= turtle.description %>
           </div>
+
           <div class="turtle-price">
           <%= turtle.price %> <%= "€" %>
           </div>
-        </li>
+
+        </div>
+        <%# end %>
+
       <% end %>
     </div>
+
   </div>
 </div>
