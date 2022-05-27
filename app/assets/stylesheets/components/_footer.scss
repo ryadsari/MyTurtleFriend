@@ -1,23 +1,21 @@
 .footer {
   background: #F4F4F4;
-  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  padding-bottom: 5px;
 }
 .footer-links {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
 }
 .footer-links a {
   color: black;
   opacity: 0.15;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 24px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
@@ -25,10 +23,4 @@
 }
 .footer .fa-heart {
   color: #D23333;
-}
-
-.footer-copyright {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
