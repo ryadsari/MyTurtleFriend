@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get '/dashboard/path', to: 'bookings#show'
   resources :turtles do
     resources :bookings
+    resources :reviews, only: [:index, :new, :create]
   end
 end
