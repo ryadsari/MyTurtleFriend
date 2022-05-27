@@ -112,6 +112,16 @@ Turtle.all.each do |turtle|
   review_seed.turtle_id = turtle.id
   review_seed.save
 end
+Turtle.all.each do |turtle|
+  review_seed = Review.create(rating: '5', comment: "such a nice turtle ! we had an amazing time this was great liek so great oh my god so great amazing like freaking amzing wow so good amazing I really recomand !")
+  review_seed.turtle_id = turtle.id
+  review_seed.save
+end
+Turtle.all.each do |turtle|
+  review_seed = Review.create(rating: '5', comment: "such a nice turtle ! we had an amazing time this was great liek so great oh my god so great amazing like freaking amzing wow so good amazing I really recomand !")
+  review_seed.turtle_id = turtle.id
+  review_seed.save
+end
 
   # old seeds
 
