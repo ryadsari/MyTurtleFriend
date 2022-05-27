@@ -2,7 +2,6 @@ class TurtlesController < ApplicationController
   before_action :set_turtle, only: [:show, :edit, :update, :destroy]
 
   def index
-    @little_description = ['Great for a movie night', 'Enjoys ice cream and clowns', 'Can act as a hat', 'Cracks jokes every few minutes', 'Great for cuddles', 'Will make you coffee in the morning', 'Makes great lasagna', 'Will do the groceries for you', 'Great pal for life']
     if params[:query].present?
       sql_query = " \
         turtles.first_name ILIKE :query \
