@@ -12,8 +12,9 @@ require 'faker'
 # #
 # puts "#{Turtle.count} turtles created"
 
-User.destroy_all
+Booking.destroy_all
 Turtle.destroy_all
+User.destroy_all
 
 # admin user
 admin = User.create(first_name: 'admin', last_name: 'admin0', email: 'admin@gmail.com', password: 'admin123', password_confirmation: 'admin123')
