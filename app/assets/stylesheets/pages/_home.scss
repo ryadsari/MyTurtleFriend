@@ -17,21 +17,23 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: auto;
+    height: 400px;
   }
   .container {
     display: block;
     align-items: center;
-    padding: 250px 100px;
+    padding: 150px 0;
 
     h1 {
-      font-size: 50px;
+      font-size: 30px;
       font-family: 'Roboto';
       padding-bottom: 30px;
+      background-color: rgba(0,0,0,0.05)
+
     }
 
     h2 {
-      font-size: 45px;
+      font-size: 25px;
       font-weight: bold;
       color: black;
 

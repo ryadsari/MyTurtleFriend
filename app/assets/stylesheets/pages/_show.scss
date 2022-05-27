@@ -5,7 +5,6 @@
     display: block;
     justify-content: center;
     align-items: center;
-    padding: 0 150px;
 
 
     .main-content {
@@ -76,7 +75,7 @@
   color: black;
   font-weight: normal;
   font-size: 18px;
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 .names2 {
@@ -90,6 +89,7 @@
 .review {
   color: #494848;
   font-weight: lighter;
+  padding-bottom: 30px
 }
 
 .reviews {
@@ -101,6 +101,10 @@
   border: none;
   padding-top: 30px;
   padding-right: 30px;
+}
+
+.review-button:hover {
+  color: white;
 }
 
 .rating {
