@@ -17,7 +17,7 @@ Turtle.destroy_all
 User.destroy_all
 
 # admin user
-admin = User.create(first_name: 'admin', last_name: 'admin0', email: 'admin@gmail.com', password: 'admin123', password_confirmation: 'admin123')
+admin = User.create(first_name: 'admin', last_name: 'admin0', email: 'admin@admin.com', password: 'admin123', password_confirmation: 'admin123')
 admin.save
 
 # users
@@ -30,48 +30,44 @@ jaqueline =   User.create(first_name: 'Jaqueline', last_name: 'Maldonado', email
 patricio =    User.create(first_name: 'Patricio', last_name: 'Perez Herrero', email: 'patricio@gmail.com', password: 'patricio123', password_confirmation: 'patricio123')
 
 
-
-
-
 # all the turtles
-file = URI.open('https://res.cloudinary.com/dlzusxobf/image/upload/v1653575355/development/5_ndptts.jpg')
+file = URI.open('https://res.cloudinary.com/dde8soxw5/image/upload/v1665675942/my-turtle/Raphael_ccb4zx.jpg')
 raphael = Turtle.new(first_name: 'Raphael', last_name: 'Turtle', description: "the one and the only Raphael", price: '50')
 raphael.photo.attach(io: file, filename: 'Raphael.png', content_type: 'image/jpg')
 raphael.user = admin
 raphael.save
 
-file = URI.open('https://res.cloudinary.com/dlzusxobf/image/upload/v1653575356/development/4_yunaxt.jpg')
+file = URI.open('https://res.cloudinary.com/dde8soxw5/image/upload/v1665675938/my-turtle/Julia_g4gbiq.jpg')
 julia = Turtle.new(first_name: 'Julia', last_name: 'Marie', description: "I alwats wanted to be a cute turtle", price: '40')
 julia.photo.attach(io: file, filename: 'julia.png', content_type: 'image/jpg')
 julia.user = julia_marie
 julia.save
 
-file = URI.open('https://res.cloudinary.com/dlzusxobf/image/upload/v1653575355/development/1_tun6ie.jpg')
+file = URI.open('https://res.cloudinary.com/dde8soxw5/image/upload/v1665675930/my-turtle/Chef-Tommy_gbzc3i.jpg')
 tommy = Turtle.new(first_name: 'Chef', last_name: 'Tommy', description: "Chef me up! Chef me up !", price: '99')
 tommy.photo.attach(io: file, filename: 'tommy.png', content_type: 'image/jpg')
 tommy.user = olwyn
 tommy.save
 
-file = URI.open('https://res.cloudinary.com/dlzusxobf/image/upload/v1653575355/development/3_ynz4du.jpg')
+file = URI.open('https://res.cloudinary.com/dde8soxw5/image/upload/v1665675930/my-turtle/Grumpy-The-elder_xidgmq.jpg')
 grumpy = Turtle.new(first_name: 'Grumpy', last_name: 'The elder', description: "Doesn't like to speak to much", price: '20')
 grumpy.photo.attach(io: file, filename: 'grumpy.png', content_type: 'image/jpg')
 grumpy.user = olwyn
 grumpy.save
 
-
-file = URI.open('https://res.cloudinary.com/dlzusxobf/image/upload/v1653581961/turtle2_s9xeqx.png')
+file = URI.open('https://res.cloudinary.com/dde8soxw5/image/upload/v1665675945/my-turtle/Sunny-Douglas_rar8pf.png')
 sunny = Turtle.new(first_name: 'Sunny', last_name: 'Douglas', description: "Great for a movie night", price: '63')
 sunny.photo.attach(io: file, filename: 'sunny.png', content_type: 'image/png')
 sunny.user = gordana
 sunny.save
 
-file = URI.open('https://res.cloudinary.com/dlzusxobf/image/upload/v1653581961/turtle5_quwimt.png')
+file = URI.open('https://res.cloudinary.com/dde8soxw5/image/upload/v1665675940/my-turtle/Rick-Sanchez_f3dkds.png')
 rick = Turtle.new(first_name: 'Rick', last_name: 'Sanchez', description: "Turtle Rick Wubba Lubba Dub-Dub !", price: '25')
 rick.photo.attach(io: file, filename: 'rick.png', content_type: 'image/png')
 rick.user = gordana
 rick.save
 
-file = URI.open('https://res.cloudinary.com/dlzusxobf/image/upload/v1653562868/development/i20yppnp7mctc0f8s6d4jenu8yed.jpg')
+file = URI.open('https://res.cloudinary.com/dde8soxw5/image/upload/v1665675939/my-turtle/Phenix-The-feeder_ycmkna.jpg')
 phenix = Turtle.new(first_name: 'Phenix', last_name: 'The feeder', description: "Look at my amazing shell !", price: '42')
 phenix.photo.attach(io: file, filename: 'phenix.png', content_type: 'image/jpg')
 phenix.user = jose
@@ -83,25 +79,25 @@ jesse.photo.attach(io: file, filename: 'jesse.png', content_type: 'image/jpg')
 jesse.user = jose
 jesse.save
 
-file = URI.open('https://res.cloudinary.com/dlzusxobf/image/upload/v1653562513/development/q3wzxp8fpqlf13m5hkvmhslsk9r3.png')
+file = URI.open('https://res.cloudinary.com/dde8soxw5/image/upload/v1665675947/my-turtle/Max-Kulas_h9zu5u.png')
 max = Turtle.new(first_name: 'Max', last_name: 'Kulas', description: "Great for cuddles", price: '19')
 max.photo.attach(io: file, filename: 'max.png', content_type: 'image/jpg')
 max.user = jaqueline
 max.save
 
-file = URI.open('https://res.cloudinary.com/dlzusxobf/image/upload/v1653581961/turtle3_fzbnup.png')
+file = URI.open('https://res.cloudinary.com/dde8soxw5/image/upload/v1665675929/my-turtle/Gary-Vee_j001xv.png')
 gary = Turtle.new(first_name: 'Gary', last_name: 'Vee', description: "Motivation coatch will get your life back in track !", price: '24')
 gary.photo.attach(io: file, filename: 'gary.png', content_type: 'image/jpg')
 gary.user = jaqueline
 gary.save
 
-file = URI.open('https://res.cloudinary.com/dlzusxobf/image/upload/v1653581961/turtle4_s3fllx.png')
+file = URI.open('https://res.cloudinary.com/dde8soxw5/image/upload/v1665675933/my-turtle/Eric-Pluf_ujp24o.png')
 eric = Turtle.new(first_name: 'Eric', last_name: 'Pluf', description: "All what he want is your love", price: '56')
 eric.photo.attach(io: file, filename: 'eric.png', content_type: 'image/jpg')
 eric.user = gordana
 eric.save
 
-file = URI.open('https://res.cloudinary.com/dlzusxobf/image/upload/v1653581964/turtle7_p3dyjn.png')
+file = URI.open('https://res.cloudinary.com/dde8soxw5/image/upload/v1665675944/my-turtle/Flipper-Flipped_bpqrbz.png')
 flipper = Turtle.new(first_name: 'Flipper', last_name: 'Flipped', description: "Will make you coffee in the morning", price: '74')
 flipper.photo.attach(io: file, filename: 'flipper.png', content_type: 'image/jpg')
 flipper.user = patricio
