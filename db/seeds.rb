@@ -104,17 +104,17 @@ flipper.user = patricio
 flipper.save
 
 Turtle.all.each do |turtle|
-  review_seed = Review.create(rating: '5', comment: "such a nice turtle ! we had an amazing time this was great liek so great oh my god so great amazing like freaking amzing wow so good amazing I really recomand !")
+  review_seed = Review.create(rating: '4', comment: "such a nice turtle ! we had an amazing time this was great like so great oh my god so great amazing like freaking amzing wow so good amazing I really recomand !")
   review_seed.turtle_id = turtle.id
   review_seed.save
 end
 Turtle.all.each do |turtle|
-  review_seed = Review.create(rating: '5', comment: "such a nice turtle ! we had an amazing time this was great liek so great oh my god so great amazing like freaking amzing wow so good amazing I really recomand !")
+  review_seed = Review.create(rating: '5', comment: "not gonna lie this turtle saved me from some dark moment...")
   review_seed.turtle_id = turtle.id
   review_seed.save
 end
 Turtle.all.each do |turtle|
-  review_seed = Review.create(rating: '5', comment: "such a nice turtle ! we had an amazing time this was great liek so great oh my god so great amazing like freaking amzing wow so good amazing I really recomand !")
+  review_seed = Review.create(rating: '5', comment: "OMG it's so cute")
   review_seed.turtle_id = turtle.id
   review_seed.save
 end

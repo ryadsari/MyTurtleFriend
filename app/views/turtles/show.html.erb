@@ -35,7 +35,8 @@
           <div class="review-item">
             <span>
               <h3><%= @reviewers.sample %></h3>
-            </span><span class="rating"><%= "*" * review.rating %></span>
+            </span>
+            <span class="rating"><%= " * " * review.rating %></span>
             <br><span class="review"> <%= review.comment %></span>
           </div>
         <% end %>
@@ -44,8 +45,3 @@
   </div>
 </div>
 
-<style>
-.footer {
-  display: none;
-}
-</style>

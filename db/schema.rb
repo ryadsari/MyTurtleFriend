@@ -56,17 +56,6 @@ ActiveRecord::Schema.define(version: 2022_05_26_163917) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  create_table "holidays", force: :cascade do |t|
-    t.datetime "date"
-    t.string "status"
-    t.bigint "user_id", null: false
-    t.bigint "turtle_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["turtle_id"], name: "index_holidays_on_turtle_id"
-    t.index ["user_id"], name: "index_holidays_on_user_id"
-  end
-
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
     t.text "comment"
@@ -105,7 +94,5 @@ ActiveRecord::Schema.define(version: 2022_05_26_163917) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookings", "turtles"
   add_foreign_key "bookings", "users"
-  add_foreign_key "holidays", "turtles"
-  add_foreign_key "holidays", "users"
   add_foreign_key "reviews", "turtles"
 end
