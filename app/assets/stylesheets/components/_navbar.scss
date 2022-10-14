@@ -4,13 +4,12 @@
 // }
 
 .navbar {
-  position: sticky;
+  position: fixed;
   background-color: rgb(243, 243, 243);
   width: 100%;
   display: flex;
   top: 0;
   border-bottom: solid 1px rgb(221, 220, 220);
-  padding: 0 25px;
 
   .container-fluid {
     width: 820px;
@@ -123,8 +122,6 @@
 .nav-link {
   color: black
 }
-
-
 
 
 // avatar size dependent on the turtle logo size

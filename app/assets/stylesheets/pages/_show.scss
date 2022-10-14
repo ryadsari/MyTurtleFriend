@@ -1,34 +1,41 @@
-.description-container {
-  height: 150vh;
-  display: block;
-  justify-content: center;
-  align-items: center;
-}
-  .main-content {
+.container {
+
+  .description-container {
+    height: 150vh;
     display: block;
     justify-content: center;
-  }
-    .names {
-      font-size: 25px;
-      padding-bottom: 20px;
-      display: flex;
-      justify-content: space-between;
-      padding-top: 100px;
+    align-items: center;
+    padding: 0 150px;
 
-      .name {
-        padding-bottom: 15px;
+
+    .main-content {
+      display: block;
+      justify-content: center;
+
+      .names {
+        font-size: 25px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 100px;
+
+        .name {
+          padding-bottom: 15px;
+        }
       }
     }
 
-  .details {
-    border-bottom: solid 1px rgb(221, 220, 220);
-    padding: 15px 0;
+    .details {
+      border-bottom: solid 1px rgb(221, 220, 220);
+      padding: 15px 0;
 
-    .detail {
-      width: 100%;
-      font-weight: lighter;
+      .detail {
+        width: 100%;
+        font-weight: lighter;
+      }
     }
   }
+}
 
 .photo {
   display: flex;
@@ -69,7 +76,7 @@
   color: black;
   font-weight: normal;
   font-size: 18px;
-  padding-top: 20px;
+  padding: 20px 0;
 }
 
 .names2 {
@@ -83,7 +90,6 @@
 .review {
   color: #494848;
   font-weight: lighter;
-  padding-bottom: 30px
 }
 
 .reviews {
@@ -95,10 +101,6 @@
   border: none;
   padding-top: 30px;
   padding-right: 30px;
-}
-
-.review-button:hover {
-  color: white;
 }
 
 .rating {
